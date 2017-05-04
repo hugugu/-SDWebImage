@@ -21,4 +21,12 @@
  */
 - (void)downloadWithUrlStr:(NSString *)urlStr finished:(void(^)(UIImage *image))finishedBlock;
 
+/**
+ 取消操作的主方法
+ 
+ @param lastUrlStr 上次下载的图片地址
+ */
+- (void)cancelOperationWithLastUrlStr:(NSString *)lastUrlStr;
+
+
 @end

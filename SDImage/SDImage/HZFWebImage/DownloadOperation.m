@@ -7,6 +7,7 @@
 //
 
 #import "DownloadOperation.h"
+#import "NSString+path.h"
 
 @interface DownloadOperation ()
 /**
@@ -46,6 +47,13 @@
     NSData *data  =[NSData dataWithContentsOfURL:url];
     
     UIImage *image = [UIImage imageWithData:data];
+    
+    //实现沙盒缓存
+    if (image) {
+        
+        [data writeToFile:[self.urlStr appendCachePath] atomically:YES];
+        
+    }
     
     // 需要在操作执行的过程中,判断该操作是否是被取消的 : 可以在多个位置写,但是一定要在耗时操作的后面有个判断;不要在回调后面写,已经晚了
     if (self.cancelled == YES) {
