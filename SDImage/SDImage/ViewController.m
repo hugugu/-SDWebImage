@@ -12,6 +12,7 @@
 #import "YYModel.h"
 #import "APPModel.h"
 #import "DownloadOperationManager.h"
+#import "UIImageView+HZF.h"
 
 @interface ViewController ()
 
@@ -69,24 +70,28 @@
     //获取随机模型
     APPModel *model = self.dataArray[random];
     
+    
+    [self.imageView HZF_setImageWithURLString:model.icon];
+    
+    
     //在建立下载操作前,判断本次传入的URL和上次的URL是否一样,如果不一样,就需要上次正在执行的下载操作
     
-    if (![model.icon isEqualToString:self.lastUrlStr] && self.lastUrlStr != nil) {
-        
-        //单例接管取消操作
-        [[DownloadOperationManager sharedManager] cancelOperationWithLastUrlStr:self.lastUrlStr];
-    
-    }
-    
-    //保存图片地址
-    self.lastUrlStr = model.icon;
-    
-    //单例接管图片下载
-    [[DownloadOperationManager sharedManager] downloadWithUrlStr:model.icon finished:^(UIImage *image) {
-        
-        self.imageView.image = image;
-        
-    }];
+//    if (![model.icon isEqualToString:self.lastUrlStr] && self.lastUrlStr != nil) {
+//        
+//        //单例接管取消操作
+//        [[DownloadOperationManager sharedManager] cancelOperationWithLastUrlStr:self.lastUrlStr];
+//    
+//    }
+//    
+//    //保存图片地址
+//    self.lastUrlStr = model.icon;
+//    
+//    //单例接管图片下载
+//    [[DownloadOperationManager sharedManager] downloadWithUrlStr:model.icon finished:^(UIImage *image) {
+//        
+//        self.imageView.image = image;
+//        
+//    }];
     
 //    // 使用随机地址下载图片
 //    DownloadOperation *op = [DownloadOperation downloadOperationWithUrlStr:model.icon finished:^(UIImage *image) {

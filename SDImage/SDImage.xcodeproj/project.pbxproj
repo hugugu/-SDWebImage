@@ -41,6 +41,7 @@
 		DF95D1FC1EBB4F500098B5AA /* APPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF95D1FB1EBB4F500098B5AA /* APPModel.m */; };
 		DF95D1FF1EBB59AD0098B5AA /* DownloadOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF95D1FE1EBB59AD0098B5AA /* DownloadOperationManager.m */; };
 		DF95D2021EBB66E60098B5AA /* NSString+path.m in Sources */ = {isa = PBXBuildFile; fileRef = DF95D2011EBB66E60098B5AA /* NSString+path.m */; };
+		DF95D2051EBB6D180098B5AA /* UIImageView+HZF.m in Sources */ = {isa = PBXBuildFile; fileRef = DF95D2041EBB6D180098B5AA /* UIImageView+HZF.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,8 @@
 		DF95D1FE1EBB59AD0098B5AA /* DownloadOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadOperationManager.m; sourceTree = "<group>"; };
 		DF95D2001EBB66E60098B5AA /* NSString+path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+path.h"; sourceTree = "<group>"; };
 		DF95D2011EBB66E60098B5AA /* NSString+path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+path.m"; sourceTree = "<group>"; };
+		DF95D2031EBB6D180098B5AA /* UIImageView+HZF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HZF.h"; sourceTree = "<group>"; };
+		DF95D2041EBB6D180098B5AA /* UIImageView+HZF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HZF.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +182,8 @@
 				DF95D1A91EBB44B10098B5AA /* DownloadOperation.m */,
 				DF95D1FD1EBB59AD0098B5AA /* DownloadOperationManager.h */,
 				DF95D1FE1EBB59AD0098B5AA /* DownloadOperationManager.m */,
+				DF95D2031EBB6D180098B5AA /* UIImageView+HZF.h */,
+				DF95D2041EBB6D180098B5AA /* UIImageView+HZF.m */,
 			);
 			path = HZFWebImage;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				DF95D1F51EBB4E9C0098B5AA /* UIImageView+HighlightedWebCache.m in Sources */,
 				DF95D1AA1EBB44B10098B5AA /* DownloadOperation.m in Sources */,
 				DF95D1FC1EBB4F500098B5AA /* APPModel.m in Sources */,
+				DF95D2051EBB6D180098B5AA /* UIImageView+HZF.m in Sources */,
 				DF95D1EA1EBB4E9C0098B5AA /* SDImageCache.m in Sources */,
 				DF95D1F11EBB4E9C0098B5AA /* UIButton+WebCache.m in Sources */,
 				DF95D1E91EBB4E9C0098B5AA /* NSData+ImageContentType.m in Sources */,

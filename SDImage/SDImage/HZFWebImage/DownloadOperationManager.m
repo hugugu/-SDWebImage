@@ -47,7 +47,6 @@
 
 #pragma mark
 #pragma mark - :实例化属性
-
 - (instancetype)init{
     
     if (self = [super init]) {
