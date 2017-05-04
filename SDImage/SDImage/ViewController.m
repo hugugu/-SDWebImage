@@ -29,6 +29,15 @@
     //创建自定义的操作
     DownloadOperation *op = [[DownloadOperation alloc]init];
     
+    op.urlStr = @"http://paper.taizhou.com.cn/tzwb/res/1/2/2015-01/20/12/res03_attpic_brief.jpg";
+    
+    [op setFinishedBlock:^(UIImage *image) {
+        
+        NSLog(@"%@  %@",image,[NSThread currentThread]);
+        
+        
+    }];
+    
     //把操作添加到队列中
     [self.queue addOperation:op];
 
