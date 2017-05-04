@@ -8,7 +8,27 @@
 
 #import "DownloadOperation.h"
 
+@interface DownloadOperation ()
+
+@property (nonatomic,copy) NSString *urlStr;
+@property (nonatomic,copy) void(^finishedBlock)(UIImage *image);
+
+
+@end
+
 @implementation DownloadOperation
+
++ (instancetype)downloadOperationWithUrlStr:(NSString *)urlStr finished:(void (^)(UIImage *))finishedBlock{
+    //实例化保留外面传进来的数据
+    DownloadOperation *op = [[DownloadOperation alloc]init];
+    
+    op.urlStr = urlStr;
+    
+    op.finishedBlock = finishedBlock;
+    
+    return op;
+}
+
 #pragma mark
 #pragma mark - :重写main 操作的入口方法,该方法默认在子线程执行
 - (void)main{

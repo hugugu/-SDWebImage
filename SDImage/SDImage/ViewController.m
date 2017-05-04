@@ -26,15 +26,13 @@
     //实例化队列
     self.queue = [NSOperationQueue new];
     
-    //创建自定义的操作
-    DownloadOperation *op = [[DownloadOperation alloc]init];
+    //图片
+    NSString *urlStr = @"http://paper.taizhou.com.cn/tzwb/res/1/2/2015-01/20/12/res03_attpic_brief.jpg";
     
-    op.urlStr = @"http://paper.taizhou.com.cn/tzwb/res/1/2/2015-01/20/12/res03_attpic_brief.jpg";
-    
-    [op setFinishedBlock:^(UIImage *image) {
+    //创建操作
+    DownloadOperation *op = [DownloadOperation downloadOperationWithUrlStr:urlStr finished:^(UIImage *image) {
         
-        NSLog(@"%@  %@",image,[NSThread currentThread]);
-        
+           NSLog(@"%@  %@",image,[NSThread currentThread]);
         
     }];
     
