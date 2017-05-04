@@ -11,6 +11,7 @@
 #import "AFNetworking.h"
 #import "YYModel.h"
 #import "APPModel.h"
+#import "DownloadOperationManager.h"
 
 @interface ViewController ()
 
@@ -88,18 +89,25 @@
     //保存图片地址
     self.lastUrlStr = model.icon;
     
-    // 使用随机地址下载图片
-    DownloadOperation *op = [DownloadOperation downloadOperationWithUrlStr:model.icon finished:^(UIImage *image) {
-        //展示图片
+    //单例接管图片下载
+    [[DownloadOperationManager sharedManager] downloadWithUrlStr:model.icon finished:^(UIImage *image) {
+        
         self.imageView.image = image;
-        //操作对应的图片下载完成,也要移除操作
-        [self.opCache removeObjectForKey:model.icon];
+        
     }];
     
-    //添加到操作缓存池
-    [self.opCache setObject:op forKey:model.icon];
-    //添加到队列
-    [self.queue addOperation:op];
+//    // 使用随机地址下载图片
+//    DownloadOperation *op = [DownloadOperation downloadOperationWithUrlStr:model.icon finished:^(UIImage *image) {
+//        //展示图片
+//        self.imageView.image = image;
+//        //操作对应的图片下载完成,也要移除操作
+//        [self.opCache removeObjectForKey:model.icon];
+//    }];
+//    
+//    //添加到操作缓存池
+//    [self.opCache setObject:op forKey:model.icon];
+//    //添加到队列
+//    [self.queue addOperation:op];
     
 }
 

@@ -37,7 +37,7 @@
     
     NSLog(@"传入 %@",self.urlStr);
     
-    // 模拟网络延迟 : 没有实际意义
+//    // 模拟网络延迟 : 没有实际意义
     [NSThread sleepForTimeInterval:1.0];
 
     //下载图片
@@ -52,8 +52,7 @@
         NSLog(@"取消 %@",self.urlStr);
         return;
     }
-    
-    
+
     //在主线程中回调
     if (self.finishedBlock) {
         

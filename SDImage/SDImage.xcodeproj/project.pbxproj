@@ -39,6 +39,7 @@
 		DF95D1F81EBB4E9C0098B5AA /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF95D1DE1EBB4E9C0098B5AA /* NSObject+YYModel.m */; };
 		DF95D1F91EBB4E9C0098B5AA /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DF95D1E01EBB4E9C0098B5AA /* YYClassInfo.m */; };
 		DF95D1FC1EBB4F500098B5AA /* APPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF95D1FB1EBB4F500098B5AA /* APPModel.m */; };
+		DF95D1FF1EBB59AD0098B5AA /* DownloadOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF95D1FE1EBB59AD0098B5AA /* DownloadOperationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,8 @@
 		DF95D1E11EBB4E9C0098B5AA /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 		DF95D1FA1EBB4F500098B5AA /* APPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPModel.h; sourceTree = "<group>"; };
 		DF95D1FB1EBB4F500098B5AA /* APPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPModel.m; sourceTree = "<group>"; };
+		DF95D1FD1EBB59AD0098B5AA /* DownloadOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadOperationManager.h; sourceTree = "<group>"; };
+		DF95D1FE1EBB59AD0098B5AA /* DownloadOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadOperationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +172,8 @@
 			children = (
 				DF95D1A81EBB44B10098B5AA /* DownloadOperation.h */,
 				DF95D1A91EBB44B10098B5AA /* DownloadOperation.m */,
+				DF95D1FD1EBB59AD0098B5AA /* DownloadOperationManager.h */,
+				DF95D1FE1EBB59AD0098B5AA /* DownloadOperationManager.m */,
 			);
 			path = HZFWebImage;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				DF95D1F81EBB4E9C0098B5AA /* NSObject+YYModel.m in Sources */,
 				DF95D1E41EBB4E9C0098B5AA /* AFSecurityPolicy.m in Sources */,
 				DF95D1E81EBB4E9C0098B5AA /* MKAnnotationView+WebCache.m in Sources */,
+				DF95D1FF1EBB59AD0098B5AA /* DownloadOperationManager.m in Sources */,
 				DF95D1E61EBB4E9C0098B5AA /* AFURLResponseSerialization.m in Sources */,
 				DF95D1F01EBB4E9C0098B5AA /* SDWebImagePrefetcher.m in Sources */,
 				DF95D1EF1EBB4E9C0098B5AA /* SDWebImageManager.m in Sources */,
